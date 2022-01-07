@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name router_power_bank-rescue)(type Legacy)(uri "C:/Users/user/Documents/KICAD DESIGNS/other projects/router_power_bank_v02/router_power_bank_v02/src_files/router_power_bank-rescue.lib")(options "")(descr ""))
+  (lib (name mini-torch-with-clock-rescue)(type Legacy)(uri "C:/Users/user/Documents/KICAD DESIGNS/other projects/mini torch with clock/mini torch with clock/src_files/mini torch with clock-rescue.lib")(options "")(descr ""))
+)

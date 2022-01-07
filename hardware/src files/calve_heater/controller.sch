@@ -1,0 +1,876 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C_Small C18
+U 1 1 61A9E348
+P 3625 1475
+F 0 "C18" H 3717 1521 50  0000 L CNN
+F 1 "100nF" H 3717 1430 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3625 1475 50  0001 C CNN
+F 3 "~" H 3625 1475 50  0001 C CNN
+	1    3625 1475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C19
+U 1 1 61A9EED6
+P 4150 1475
+F 0 "C19" H 4242 1521 50  0000 L CNN
+F 1 "100nF" H 4242 1430 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4150 1475 50  0001 C CNN
+F 3 "~" H 4150 1475 50  0001 C CNN
+	1    4150 1475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1250 4150 1375
+Wire Wire Line
+	3625 1575 3625 1675
+Wire Wire Line
+	3625 1675 3900 1675
+Wire Wire Line
+	4150 1675 4150 1575
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR042
+U 1 1 61A9FEAE
+P 3900 1675
+F 0 "#PWR042" H 3900 1425 50  0001 C CNN
+F 1 "GND" H 3905 1502 50  0000 C CNN
+F 2 "" H 3900 1675 60  0000 C CNN
+F 3 "" H 3900 1675 60  0000 C CNN
+	1    3900 1675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 1675 4150 1675
+Wire Wire Line
+	2575 1525 2575 1625
+Wire Wire Line
+	2675 1525 2675 1625
+Text Notes 3950 1225 0    50   ~ 0
+decoupling caps
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR037
+U 1 1 61AA0D1D
+P 2575 4700
+F 0 "#PWR037" H 2575 4450 50  0001 C CNN
+F 1 "GND" H 2580 4527 50  0000 C CNN
+F 2 "" H 2575 4700 60  0000 C CNN
+F 3 "" H 2575 4700 60  0000 C CNN
+	1    2575 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2575 4700 2575 4625
+NoConn ~ 1975 1925
+NoConn ~ 1975 2125
+NoConn ~ 1975 2225
+Wire Wire Line
+	3175 3425 3375 3425
+Text Label 3375 3425 0    50   ~ 0
+reset
+Text Label 5225 3675 2    50   ~ 0
+reset
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR049
+U 1 1 61AA99C9
+P 8975 4775
+F 0 "#PWR049" H 8975 4525 50  0001 C CNN
+F 1 "GND" H 8980 4602 50  0000 C CNN
+F 2 "" H 8975 4775 60  0000 C CNN
+F 3 "" H 8975 4775 60  0000 C CNN
+	1    8975 4775
+	0    -1   -1   0   
+$EndComp
+Text Notes 8175 5150 0    39   ~ 0
+no need for external \npullup when using \ninternal oscillator\n(internal pull up is enabled)\nLONG PRESS TO TURN OFF
+Text Notes 7775 4300 0    50   ~ 10
+ON/OFF BUTTON
+Connection ~ 3900 1675
+Wire Wire Line
+	3175 2325 3400 2325
+Wire Wire Line
+	3175 2225 3400 2225
+Text Label 3400 2225 0    50   ~ 0
+MOSI
+Text Label 3400 2325 0    50   ~ 0
+MISO
+Wire Wire Line
+	3175 2425 3400 2425
+Text Label 3400 2425 0    50   ~ 0
+CLK
+Text Label 3400 3625 0    50   ~ 0
+RXD
+Text Label 3400 3725 0    50   ~ 0
+TXD
+Wire Wire Line
+	3175 3725 3400 3725
+Wire Wire Line
+	3400 3625 3175 3625
+Text Label 8275 1650 2    50   ~ 0
+RXD
+Text Label 8250 1875 2    50   ~ 0
+TXD
+Wire Wire Line
+	8425 1650 8275 1650
+Wire Wire Line
+	8425 1875 8250 1875
+Wire Notes Line
+	3875 3750 3950 3750
+Text Label 8325 4775 2    50   ~ 0
+ON_OFF_BTN
+Wire Notes Line
+	7750 1250 9275 1250
+Wire Notes Line
+	9275 1250 9275 2325
+Wire Notes Line
+	9275 2325 7750 2325
+Wire Notes Line
+	7750 2325 7750 1250
+Wire Notes Line
+	9250 5175 7725 5175
+NoConn ~ 3175 3025
+NoConn ~ 3175 3125
+Text Notes 1075 1275 0    50   ~ 10
+MICROCONTROLLER\nATMEGA328P-AU
+Text Notes 7800 1375 0    50   ~ 10
+UART PINS
+Wire Wire Line
+	8725 4775 8975 4775
+$Comp
+L Switch:SW_Push SW2
+U 1 1 61AA24EF
+P 8525 4775
+F 0 "SW2" H 8525 5060 50  0000 C CNN
+F 1 "SW_Push" H 8525 4969 50  0000 C CNN
+F 2 "greencharge-footprints:SKRPACE010" H 8525 4975 50  0001 C CNN
+F 3 "~" H 8525 4975 50  0001 C CNN
+	1    8525 4775
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	900  4925 900  1000
+Wire Notes Line
+	6325 4925 900  4925
+Wire Notes Line
+	7725 5175 7725 4175
+Wire Notes Line
+	9250 4175 9250 5175
+Wire Notes Line
+	7725 4175 9250 4175
+Wire Notes Line
+	7750 2775 9275 2775
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J3
+U 1 1 61ACC53E
+P 8300 3425
+F 0 "J3" H 8350 3742 50  0000 C CNN
+F 1 "ICSP_HEADER" H 8350 3651 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 8300 3425 50  0001 C CNN
+F 3 "~" H 8300 3425 50  0001 C CNN
+	1    8300 3425
+	1    0    0    -1  
+$EndComp
+Text Notes 7800 2925 0    50   ~ 10
+ICSP HEADER
+Text Label 7975 3525 2    50   ~ 0
+reset
+Text Label 8825 3425 0    50   ~ 0
+MOSI
+Text Label 7975 3325 2    50   ~ 0
+MISO
+Text Label 7975 3425 2    50   ~ 0
+CLK
+Wire Wire Line
+	9100 3325 9100 3275
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR047
+U 1 1 61ADFE25
+P 8825 3550
+F 0 "#PWR047" H 8825 3300 50  0001 C CNN
+F 1 "GND" H 8830 3377 50  0000 C CNN
+F 2 "" H 8825 3550 60  0000 C CNN
+F 3 "" H 8825 3550 60  0000 C CNN
+	1    8825 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 3525 8825 3525
+Wire Wire Line
+	8825 3525 8825 3550
+Wire Wire Line
+	8825 3425 8600 3425
+Wire Wire Line
+	8100 3325 7975 3325
+Wire Wire Line
+	8100 3425 7975 3425
+Wire Wire Line
+	8100 3525 7975 3525
+Wire Notes Line
+	7750 3850 7750 2775
+Wire Notes Line
+	9275 3850 7750 3850
+Wire Notes Line
+	9275 2775 9275 3850
+$Comp
+L Device:Crystal_GND24 Y1
+U 1 1 63E63890
+P 5100 2275
+F 0 "Y1" V 5175 2475 50  0000 L CNN
+F 1 "X322516MOB4SI" V 5250 2375 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_EuroQuartz_MT-4Pin_3.2x2.5mm" H 5100 2275 50  0001 C CNN
+F 3 "~" H 5100 2275 50  0001 C CNN
+	1    5100 2275
+	0    1    1    0   
+$EndComp
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR043
+U 1 1 63E74B41
+P 4775 2275
+F 0 "#PWR043" H 4775 2025 50  0001 C CNN
+F 1 "GND" H 4780 2102 50  0000 C CNN
+F 2 "" H 4775 2275 60  0000 C CNN
+F 3 "" H 4775 2275 60  0000 C CNN
+	1    4775 2275
+	0    1    1    0   
+$EndComp
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR045
+U 1 1 63E7C87E
+P 5775 2275
+F 0 "#PWR045" H 5775 2025 50  0001 C CNN
+F 1 "GND" H 5780 2102 50  0000 C CNN
+F 2 "" H 5775 2275 60  0000 C CNN
+F 3 "" H 5775 2275 60  0000 C CNN
+	1    5775 2275
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5775 2275 5750 2275
+Wire Wire Line
+	4900 2275 4775 2275
+$Comp
+L Device:C_Small C21
+U 1 1 63E88987
+P 5250 1925
+F 0 "C21" V 5300 1950 50  0000 L CNN
+F 1 "22pF" V 5300 1675 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5250 1925 50  0001 C CNN
+F 3 "~" H 5250 1925 50  0001 C CNN
+	1    5250 1925
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C22
+U 1 1 63E9E48A
+P 5275 2625
+F 0 "C22" V 5325 2650 50  0000 L CNN
+F 1 "22pF" V 5325 2375 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5275 2625 50  0001 C CNN
+F 3 "~" H 5275 2625 50  0001 C CNN
+	1    5275 2625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5150 1925 5100 1925
+Wire Wire Line
+	5100 1925 5100 2125
+Wire Wire Line
+	5100 2425 5100 2625
+Wire Wire Line
+	5100 2625 5175 2625
+Wire Wire Line
+	5750 2625 5750 2275
+Wire Wire Line
+	5375 2625 5750 2625
+Connection ~ 5750 2275
+Wire Wire Line
+	5750 2275 5300 2275
+Wire Wire Line
+	5750 1925 5750 2275
+Wire Wire Line
+	5350 1925 5750 1925
+Wire Wire Line
+	5100 1925 4700 1925
+Connection ~ 5100 1925
+Wire Wire Line
+	5100 2625 4675 2625
+Connection ~ 5100 2625
+Text Label 3425 2525 0    39   ~ 0
+XTAL1
+Text Label 3425 2625 0    39   ~ 0
+XTAL2
+Wire Wire Line
+	3425 2525 3175 2525
+Wire Wire Line
+	3175 2625 3425 2625
+Text Label 4700 1925 2    39   ~ 0
+XTAL1
+Text Label 4675 2625 2    39   ~ 0
+XTAL2
+Wire Notes Line
+	4450 1725 4450 2800
+Wire Notes Line
+	4450 2800 6200 2800
+Wire Notes Line
+	6200 2800 6200 1725
+Wire Notes Line
+	6200 1725 4450 1725
+Wire Notes Line
+	4450 3000 6275 3000
+Wire Notes Line
+	6275 3000 6275 4250
+Wire Notes Line
+	6275 4250 4450 4250
+Wire Notes Line
+	4450 4250 4450 3000
+$Comp
+L Device:R_US R12
+U 1 1 63EF8668
+P 5350 3525
+F 0 "R12" H 5418 3571 50  0000 L CNN
+F 1 "4.7K" H 5418 3480 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5390 3515 50  0001 C CNN
+F 3 "~" H 5350 3525 50  0001 C CNN
+	1    5350 3525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3675 5225 3675
+$Comp
+L Connector:TestPoint TP7
+U 1 1 61C68C84
+P 8425 1650
+F 0 "TP7" V 8350 1750 50  0000 L CNN
+F 1 "RX" V 8425 1850 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8625 1650 50  0001 C CNN
+F 3 "~" H 8625 1650 50  0001 C CNN
+	1    8425 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 61C7ACDD
+P 8425 1875
+F 0 "TP8" V 8500 1950 50  0000 L CNN
+F 1 "TX" V 8425 2050 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8625 1875 50  0001 C CNN
+F 3 "~" H 8625 1875 50  0001 C CNN
+	1    8425 1875
+	0    1    1    0   
+$EndComp
+Text Label 3400 1925 0    39   ~ 0
+LED_RED
+Text Label 3400 2025 0    39   ~ 0
+LED_GREEN
+Wire Wire Line
+	3400 1925 3175 1925
+Text Label 3400 3925 0    50   ~ 0
+ON_OFF_BTN
+Wire Wire Line
+	3175 3925 3400 3925
+Wire Wire Line
+	3175 2025 3400 2025
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR048
+U 1 1 61D4A0A1
+P 8875 5700
+F 0 "#PWR048" H 8875 5450 50  0001 C CNN
+F 1 "GND" H 8880 5527 50  0000 C CNN
+F 2 "" H 8875 5700 60  0000 C CNN
+F 3 "" H 8875 5700 60  0000 C CNN
+	1    8875 5700
+	0    -1   -1   0   
+$EndComp
+Text Label 8225 5700 2    50   ~ 0
+TEMP_LVL_BTN
+Wire Wire Line
+	8625 5700 8875 5700
+$Comp
+L Switch:SW_Push SW1
+U 1 1 61D4A0B5
+P 8425 5700
+F 0 "SW1" H 8425 5985 50  0000 C CNN
+F 1 "SW_Push" H 8425 5894 50  0000 C CNN
+F 2 "greencharge-footprints:SKRPACE010" H 8425 5900 50  0001 C CNN
+F 3 "~" H 8425 5900 50  0001 C CNN
+	1    8425 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3175 3825 3400 3825
+Wire Wire Line
+	3175 4025 3400 4025
+Text Label 3400 3825 0    50   ~ 0
+TEMP_LVL_BTN
+Text Notes 3950 3875 0    30   ~ 0
+INTERRUPT PINS\n
+Wire Notes Line
+	3950 3925 3875 3925
+Wire Notes Line
+	3950 3750 3950 3925
+Wire Notes Line
+	7675 5325 9275 5325
+Wire Notes Line
+	9275 5325 9275 6200
+Wire Notes Line
+	9275 6200 7675 6200
+Wire Notes Line
+	7675 6200 7675 5325
+$Comp
+L mini-torch-with-clock-rescue:ATmega328P-MU-MCU_Microchip_ATmega U3
+U 1 1 61D98B75
+P 2575 3125
+F 0 "U3" H 2475 2350 50  0000 C CNN
+F 1 "ATmega328P-MU" H 2450 2250 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm" H 2575 3125 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 2575 3125 50  0001 C CNN
+	1    2575 3125
+	1    0    0    -1  
+$EndComp
+Text Label 8625 3325 0    30   ~ 0
+3.3V_NET_FROM_ICSP
+Wire Wire Line
+	8600 3325 9100 3325
+$Comp
+L Device:C_Small C20
+U 1 1 61C6C43A
+P 4575 1500
+F 0 "C20" H 4667 1546 50  0000 L CNN
+F 1 "100nF" H 4667 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4575 1500 50  0001 C CNN
+F 3 "~" H 4575 1500 50  0001 C CNN
+	1    4575 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4575 1250 4575 1400
+Wire Wire Line
+	4575 1675 4150 1675
+Wire Wire Line
+	4575 1600 4575 1675
+Connection ~ 4150 1250
+Wire Wire Line
+	4150 1250 4575 1250
+Connection ~ 4150 1675
+Text Notes 8750 6200 0    39   ~ 0
+ONLY 3 LEVEL:\nLOW=40 DEG\nMEDIUM=44 DEG\nHIGH = 48 DEG
+Text Label 3400 2125 0    39   ~ 0
+LED_BLUE
+Wire Wire Line
+	3175 2125 3400 2125
+Text Label 5725 5800 1    39   ~ 0
+LED_RED
+Text Label 5925 5800 1    39   ~ 0
+LED_GREEN
+Wire Wire Line
+	5925 6700 5925 6400
+Text Label 6125 5800 1    39   ~ 0
+LED_BLUE
+Wire Wire Line
+	6125 6700 6125 6400
+Wire Wire Line
+	5725 6425 5725 6700
+Wire Wire Line
+	5725 5800 5725 6125
+$Comp
+L Device:R_US R13
+U 1 1 61DDA0D8
+P 5725 6275
+F 0 "R13" H 5775 6325 50  0000 L CNN
+F 1 "1K" H 5775 6225 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5765 6265 50  0001 C CNN
+F 3 "~" H 5725 6275 50  0001 C CNN
+	1    5725 6275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R14
+U 1 1 61DDDFD4
+P 5925 6250
+F 0 "R14" H 5975 6300 50  0000 L CNN
+F 1 "1K" H 5975 6200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5965 6240 50  0001 C CNN
+F 3 "~" H 5925 6250 50  0001 C CNN
+	1    5925 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5925 6100 5925 5800
+$Comp
+L Device:R_US R15
+U 1 1 61DDFBF4
+P 6125 6250
+F 0 "R15" H 6175 6300 50  0000 L CNN
+F 1 "1K" H 6175 6200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6165 6240 50  0001 C CNN
+F 3 "~" H 6125 6250 50  0001 C CNN
+	1    6125 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6125 6100 6125 5800
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR046
+U 1 1 61DE1B33
+P 5925 7200
+F 0 "#PWR046" H 5925 6950 50  0001 C CNN
+F 1 "GND" H 5930 7027 50  0000 C CNN
+F 2 "" H 5925 7200 60  0000 C CNN
+F 3 "" H 5925 7200 60  0000 C CNN
+	1    5925 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5925 7200 5725 7200
+Wire Wire Line
+	5725 7200 5725 7100
+Wire Wire Line
+	5925 7200 5925 7100
+Connection ~ 5925 7200
+Wire Wire Line
+	5925 7200 6125 7200
+Wire Wire Line
+	6125 7200 6125 7100
+$Comp
+L GCL_Integrated-Circuits:EAST1616RGBA8 U4
+U 1 1 61DFD6F8
+P 5475 6900
+F 0 "U4" V 5400 6125 50  0000 R CNN
+F 1 "EAST1616RGBA8" V 5275 6200 50  0000 R CNN
+F 2 "greencharge-footprints:EAST1616RGBA8" H 5475 6900 50  0001 C CNN
+F 3 "" H 5475 6900 50  0001 C CNN
+	1    5475 6900
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 3175 3325
+NoConn ~ 3175 3225
+Wire Notes Line
+	6800 5225 6800 7650
+Wire Notes Line
+	6800 7650 4600 7650
+Wire Notes Line
+	4600 7650 4600 5225
+Wire Notes Line
+	4600 5225 6800 5225
+Text Notes 4650 5300 0    50   ~ 0
+TEMPERATURE SETTING LEVEL INDICATOR
+$Comp
+L Device:Q_NMOS_GSD Q2
+U 1 1 61E13E88
+P 2625 6000
+F 0 "Q2" H 2830 6046 50  0000 L CNN
+F 1 "SI2304BDS-T1-GE3" H 2830 5955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2825 6100 50  0001 C CNN
+F 3 "~" H 2625 6000 50  0001 C CNN
+	1    2625 6000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61E24404
+P 2525 5550
+AR Path="/61E24404" Ref="#PWR?"  Part="1" 
+AR Path="/61D861AC/61E24404" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 2525 5400 50  0001 C CNN
+F 1 "+5V" H 2540 5723 50  0000 C CNN
+F 2 "" H 2525 5550 50  0001 C CNN
+F 3 "" H 2525 5550 50  0001 C CNN
+	1    2525 5550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2525 5550 2525 5800
+Wire Wire Line
+	2525 6200 2525 6550
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 61E2A573
+P 1125 6650
+F 0 "J2" H 1233 6931 50  0000 C CNN
+F 1 "Conn_out" H 1225 6875 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 1125 6650 50  0001 C CNN
+F 3 "~" H 1125 6650 50  0001 C CNN
+F 4 "S4B-XH-SM4-TB(LF)(SN)" H 1125 6650 50  0001 C CNN "MPN"
+	1    1125 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1325 6550 2525 6550
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR035
+U 1 1 61E30709
+P 2500 6650
+F 0 "#PWR035" H 2500 6400 50  0001 C CNN
+F 1 "GND" H 2505 6477 50  0000 C CNN
+F 2 "" H 2500 6650 60  0000 C CNN
+F 3 "" H 2500 6650 60  0000 C CNN
+	1    2500 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1325 6650 2500 6650
+Wire Notes Line
+	2575 6500 2675 6500
+Wire Notes Line
+	2675 6500 2675 6675
+Wire Notes Line
+	2675 6675 2550 6675
+Wire Wire Line
+	2825 6000 2900 6000
+$Comp
+L Device:R_US R10
+U 1 1 61E3A027
+P 3050 6000
+F 0 "R10" V 3125 5975 50  0000 L CNN
+F 1 "150R" V 2975 5925 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3090 5990 50  0001 C CNN
+F 3 "~" H 3050 6000 50  0001 C CNN
+	1    3050 6000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3200 6000 3400 6000
+Text Label 3400 6000 0    50   ~ 0
+HEATER_PWM_PIN
+Text Label 3400 4125 0    50   ~ 0
+HEATER_PWM_PIN
+Wire Wire Line
+	3400 4125 3175 4125
+Text Notes 2700 6600 0    50   ~ 0
+HEATER
+Text Notes 1925 7625 0    50   ~ 0
+connector to heater and \nRTD emp sensor
+Text Notes 1075 5350 0    50   ~ 0
+TO HEATER AND RTD
+$Comp
+L Device:R_US R11
+U 1 1 61E5F5C5
+P 3125 6925
+F 0 "R11" V 3200 6900 50  0000 L CNN
+F 1 "150R" V 3050 6850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3165 6915 50  0001 C CNN
+F 3 "~" H 3125 6925 50  0001 C CNN
+	1    3125 6925
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61E648F0
+P 3125 6675
+AR Path="/61E648F0" Ref="#PWR?"  Part="1" 
+AR Path="/61D861AC/61E648F0" Ref="#PWR039"  Part="1" 
+F 0 "#PWR039" H 3125 6525 50  0001 C CNN
+F 1 "+5V" H 3140 6848 50  0000 C CNN
+F 2 "" H 3125 6675 50  0001 C CNN
+F 3 "" H 3125 6675 50  0001 C CNN
+	1    3125 6675
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3125 6775 3125 6675
+Wire Wire Line
+	3125 7075 3125 7150
+Wire Wire Line
+	3125 7150 1800 7150
+Wire Wire Line
+	1800 7150 1800 6750
+Wire Wire Line
+	1325 6750 1800 6750
+Wire Wire Line
+	1675 6850 1675 7250
+Wire Wire Line
+	1675 7250 3125 7250
+Wire Wire Line
+	3125 7250 3125 7375
+Wire Wire Line
+	1325 6850 1675 6850
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR040
+U 1 1 61E702E0
+P 3125 7375
+F 0 "#PWR040" H 3125 7125 50  0001 C CNN
+F 1 "GND" H 3130 7202 50  0000 C CNN
+F 2 "" H 3125 7375 60  0000 C CNN
+F 3 "" H 3125 7375 60  0000 C CNN
+	1    3125 7375
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	1850 6750 1950 6750
+Wire Notes Line
+	1950 6750 1950 6925
+Wire Notes Line
+	1950 6925 1825 6925
+Text Notes 1975 6850 0    50   ~ 0
+RTD
+Wire Wire Line
+	3125 7150 3300 7150
+Connection ~ 3125 7150
+Text Label 3300 7150 0    50   ~ 0
+RTD_TO_A0
+Text Label 3425 2825 0    50   ~ 0
+RTD_TO_A0
+Wire Wire Line
+	3175 2825 3425 2825
+Wire Notes Line
+	925  5225 925  7650
+Wire Notes Line
+	4400 7650 4400 5225
+Wire Notes Line
+	4400 5225 925  5225
+Wire Notes Line
+	925  7650 4400 7650
+Text Label 1475 6550 0    39   ~ 0
+HEATER_+VE
+Text Label 1500 6650 0    39   ~ 0
+HEATER_-VE
+Text Label 1375 6850 0    39   ~ 0
+RTD_-VE
+Text Label 1400 6750 0    39   ~ 0
+RTD_+VE
+Wire Notes Line
+	6325 1000 6325 4925
+Wire Notes Line
+	900  1000 6325 1000
+Wire Notes Line
+	6250 500  6250 850 
+Wire Notes Line
+	11100 500  6250 500 
+Wire Notes Line
+	11100 850  11100 500 
+Wire Notes Line
+	6250 850  11100 850 
+Text Notes 6275 800  0    50   ~ 10
+link 2: https://create.arduino.cc/projecthub/techmirtz/arduino-without-external-clock-crystal-on-atmega328-d4fcc4
+Text Notes 6275 700  0    50   ~ 10
+link 1: https://www.arduino.cc/en/Tutorial/BuiltInExamples/ArduinoToBreadboard
+NoConn ~ 3175 4325
+NoConn ~ 3175 4225
+NoConn ~ 3400 4025
+Text GLabel 4000 2450 1    50   Input ~ 0
+vbat+
+$Comp
+L Device:R_US R16
+U 1 1 620FAEA2
+P 4000 2675
+F 0 "R16" H 4068 2721 50  0000 L CNN
+F 1 "1K" H 4068 2630 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4040 2665 50  0001 C CNN
+F 3 "~" H 4000 2675 50  0001 C CNN
+	1    4000 2675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R17
+U 1 1 620FEA76
+P 4000 3150
+F 0 "R17" H 4068 3196 50  0000 L CNN
+F 1 "1K" H 4068 3105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4040 3140 50  0001 C CNN
+F 3 "~" H 4000 3150 50  0001 C CNN
+	1    4000 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2925 4000 3000
+Wire Wire Line
+	3175 2925 4000 2925
+Wire Wire Line
+	4000 2825 4000 2925
+Connection ~ 4000 2925
+Wire Wire Line
+	4000 2450 4000 2525
+$Comp
+L mini-torch-with-clock-rescue:GND-OLIMEX_Power #PWR053
+U 1 1 62112647
+P 4000 3300
+F 0 "#PWR053" H 4000 3050 50  0001 C CNN
+F 1 "GND" H 4005 3127 50  0000 C CNN
+F 2 "" H 4000 3300 60  0000 C CNN
+F 3 "" H 4000 3300 60  0000 C CNN
+	1    4000 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2575 1525 2625 1525
+$Comp
+L OLIMEX_Power:+3.3V #PWR?
+U 1 1 6212A1A2
+P 2625 1500
+AR Path="/6212A1A2" Ref="#PWR?"  Part="1" 
+AR Path="/61D861AC/6212A1A2" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 2625 1350 50  0001 C CNN
+F 1 "+3.3V" H 2640 1673 50  0000 C CNN
+F 2 "" H 2625 1500 60  0000 C CNN
+F 3 "" H 2625 1500 60  0000 C CNN
+	1    2625 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2625 1500 2625 1525
+Connection ~ 2625 1525
+Wire Wire Line
+	2625 1525 2675 1525
+Wire Wire Line
+	3625 1250 4150 1250
+$Comp
+L OLIMEX_Power:+3.3V #PWR?
+U 1 1 62134AC8
+P 3625 1225
+AR Path="/62134AC8" Ref="#PWR?"  Part="1" 
+AR Path="/61D861AC/62134AC8" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 3625 1075 50  0001 C CNN
+F 1 "+3.3V" H 3640 1398 50  0000 C CNN
+F 2 "" H 3625 1225 60  0000 C CNN
+F 3 "" H 3625 1225 60  0000 C CNN
+	1    3625 1225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3625 1225 3625 1250
+Connection ~ 3625 1250
+Wire Wire Line
+	3625 1250 3625 1375
+$Comp
+L OLIMEX_Power:+3.3V #PWR?
+U 1 1 62141069
+P 9100 3275
+AR Path="/62141069" Ref="#PWR?"  Part="1" 
+AR Path="/61D861AC/62141069" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 9100 3125 50  0001 C CNN
+F 1 "+3.3V" H 9115 3448 50  0000 C CNN
+F 2 "" H 9100 3275 60  0000 C CNN
+F 3 "" H 9100 3275 60  0000 C CNN
+	1    9100 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L OLIMEX_Power:+3.3V #PWR?
+U 1 1 62150B03
+P 5350 3350
+AR Path="/62150B03" Ref="#PWR?"  Part="1" 
+AR Path="/61D861AC/62150B03" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 5350 3200 50  0001 C CNN
+F 1 "+3.3V" H 5365 3523 50  0000 C CNN
+F 2 "" H 5350 3350 60  0000 C CNN
+F 3 "" H 5350 3350 60  0000 C CNN
+	1    5350 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3375 5350 3350
+$EndSCHEMATC
