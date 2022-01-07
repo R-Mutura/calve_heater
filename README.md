@@ -2,9 +2,9 @@
 This product features 3 main parts: the fabric containig a heater and  temperature RTD sensor embedded in it, a PCB that runs the heater and warming process and Firmware that is burnt in to the MCU located on the PCB assembly. 
 The product features a modular approach where the controlling PCB can be plugged and unplugged from the fabric at will. It has a small form factor that allows it to be a hand held device that is powered via a Li-Po battery.
 
-![calve_heater 2](https://user-images.githubusercontent.com/85989401/148508320-631c278a-a57c-4cd3-b7d5-933df3e45fcf.png)
+![calve_heater](https://user-images.githubusercontent.com/85989401/148527832-ed9df572-df2b-413e-93af-cbba2c7b436f.png)
 
-![calve_heater 3](https://user-images.githubusercontent.com/85989401/148511438-d502d117-fbd1-4d12-860a-ce15e922702d.png)
+![calve_heater 4](https://user-images.githubusercontent.com/85989401/148527747-6fef1afc-839d-4003-b079-f2b616777e77.png)
 
 ### How it works 🔧
 THe PCB contains JST connectors from where the heater and temperature sensor are plugged into the board. Make sure thwy are plugged in. Press the ON button(left od USB) and the device wakes up and starsts the heating process. To turn off the device, Long press the ON button for about 1 sec. This will cause the device to go to sleep.
