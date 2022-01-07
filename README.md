@@ -2,9 +2,9 @@
 This product features 3 main parts: the fabric containig a heater and  temperature RTD sensor embedded in it, a PCB that runs the heater and warming process and Firmware that is burnt in to the MCU located on the PCB assembly. 
 The product features a modular approach where the controlling PCB can be plugged and unplugged from the fabric at will. It has a small form factor that allows it to be a hand held device that is powered via a Li-Po battery.
 
-![calve_heater 2](https://user-images.githubusercontent.com/85989401/148508320-631c278a-a57c-4cd3-b7d5-933df3e45fcf.png)
+![calve_heater](https://user-images.githubusercontent.com/85989401/148527832-ed9df572-df2b-413e-93af-cbba2c7b436f.png)
 
-![calve_heater 3](https://user-images.githubusercontent.com/85989401/148511438-d502d117-fbd1-4d12-860a-ce15e922702d.png)
+![calve_heater 4](https://user-images.githubusercontent.com/85989401/148527747-6fef1afc-839d-4003-b079-f2b616777e77.png)
 
 ### How it works 🔧
 THe PCB contains JST connectors from where the heater and temperature sensor are plugged into the board. Make sure thwy are plugged in. Press the ON button(left od USB) and the device wakes up and starsts the heating process. To turn off the device, Long press the ON button for about 1 sec. This will cause the device to go to sleep.
@@ -34,7 +34,7 @@ All the electrical components are on the PCB and can be disconnected in case of 
 # BURNING BOOTLOADER AND FIRMWARE TO THE PCB
 ### Download the Files :arrow_down_small:
 From this repo click on the download option at the code :arrow_double_down: 
-- You will have two folders inside the main folder i.e 📁 Bootloader and  📁clock_module_code
+- You will have two folders inside the main folder i.e 📁 Bootloader and  📁calve_heater_furmware
 <br>
 ##  Burning bootload to the MCU :fire:
  <h3> Note: 
@@ -52,7 +52,7 @@ or here
  <br/>
  
  ## Uploading the codes  :arrow_up:
- 1) Open the 📁clock_module_code Folder and open the INO file with your arduino
+ 1) Open the 📁calve_heater_furmware Folder and open the INO file with your arduino
 2) If you use Arduino as your programmer or an FTDI, Follow the instructions here from step 3: [Uploading Code](https://create.arduino.cc/projecthub/techmirtz/arduino-without-external-clock-crystal-on-atmega328-d4fcc4)
 3) However if you are using a USBASP, Follow the following instructions:<br>
    a) Insert the ISP programmer cable socket onto ISP header. ...<br>
