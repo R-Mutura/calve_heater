@@ -34,7 +34,7 @@ All the electrical components are on the PCB and can be disconnected in case of 
 # BURNING BOOTLOADER AND FIRMWARE TO THE PCB
 ### Download the Files :arrow_down_small:
 From this repo click on the download option at the code :arrow_double_down: 
-- You will have two folders inside the main folder i.e 📁 Bootloader and  📁clock_module_code
+- You will have two folders inside the main folder i.e 📁 Bootloader and  📁calve_heater_furmware
 <br>
 ##  Burning bootload to the MCU :fire:
  <h3> Note: 
@@ -52,7 +52,7 @@ or here
  <br/>
  
  ## Uploading the codes  :arrow_up:
- 1) Open the 📁clock_module_code Folder and open the INO file with your arduino
+ 1) Open the 📁calve_heater_furmware Folder and open the INO file with your arduino
 2) If you use Arduino as your programmer or an FTDI, Follow the instructions here from step 3: [Uploading Code](https://create.arduino.cc/projecthub/techmirtz/arduino-without-external-clock-crystal-on-atmega328-d4fcc4)
 3) However if you are using a USBASP, Follow the following instructions:<br>
    a) Insert the ISP programmer cable socket onto ISP header. ...<br>
